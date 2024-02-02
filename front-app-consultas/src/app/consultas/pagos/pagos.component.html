@@ -1,0 +1,46 @@
+<app-nav></app-nav>
+
+<section class="home">
+    <div class="content">
+        <div class="opciones">
+            <div class="op">
+
+                <div class="form-group">
+                    <input type="checkbox" id="opcionesCheck" class="opciones-element">
+                    <h1>Crédito</h1>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="opcionesCheck" class="opciones-element">
+                    <h1>Débito</h1>
+                </div>
+            </div>
+            <div class="img">
+                <img src="assets/metodo1.png" alt="metodo1">
+                <img src="assets/metodo2.png" alt="metodo2">
+            </div>
+        </div>
+        <div class="tarjeta">
+            <img src="assets/delante.png" alt="delante">           
+        </div>
+        <div class="tarjeta1">
+            <img src="assets/atras.png" alt="delante">           
+        </div>
+        <div class="form">
+            <label for="titular" id="titular">Titular de la tarjeta</label>
+            <input type="text" name="titular">
+            <label for="numero" id="numero">Número de tarjeta</label>
+            <input type="text" name="numero">
+            <label for="fecha" id="fecha">Fecha de caducidad</label>
+            <input type="text" name="cod">
+            <label for="cod" id="cod">Código de seguridad</label>
+            <input type="text" name="fecha">
+        </div>
+        <button (click)="pagar()" class="orange-button">Pagar</button>
+    </div>
+</section>
+
+<div *ngIf="loading" class="loading-overlay">
+    <div class="spinner"></div>
+  </div>
+
+<app-footer></app-footer>

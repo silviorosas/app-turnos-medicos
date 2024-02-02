@@ -1,0 +1,139 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que el contenedor ocupa al menos el 100% de la altura visible */
+}
+
+.calendar-container {
+  flex: 1; /* Hace que el contenedor del calendario ocupe todo el espacio disponible */
+  overflow: auto; /* Agrega un desplazamiento vertical si es necesario */
+
+}
+
+app-footer {
+  flex-shrink: 0; /* Evita que el pie de página se contraiga si hay poco contenido en el calendario */
+}
+
+
+
+/* fullcalendar */
+
+.calendar-container {  
+    font-size: 13px; /* Tamaño de la fuente deseado */     
+  }
+  
+  /* En tu archivo de estilo del componente */
+  :host ::ng-deep .fc-header-toolbar .fc-toolbar-title {
+    font-size: 16px; /* Tamaño del título */
+    color: #357194; /* Color del texto */
+    text-align: center;
+  } 
+  
+  :host ::ng-deep .fc-timegrid-event {
+    /* Ajusta el tamaño de la fuente y otros estilos */
+    font-size: 11px;
+    overflow: visible; /* Permite mostrar todo el contenido del evento */
+    white-space: normal; /* Envuelve el texto para que se muestre completamente */
+    width: 80px;
+    height: 80px;     
+  }
+
+
+
+
+
+
+
+/* Ajustes específicos para tamaños de pantalla pequeños */
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+  .calendar-container {
+    width: 100%;
+    font-size: 14px; /* Ajusta el tamaño de fuente según tus necesidades */
+    padding: 0;
+    margin: 0;
+    overflow-x: auto; /* Agrega scroll horizontal si es necesario */
+  }
+
+  /* Ajusta el ancho de las columnas de los días */
+  :host ::ng-deep .fc-scroller {
+    overflow-x: auto;
+  }
+
+  :host ::ng-deep .fc-scrollgrid {
+    min-width: 600px; /* Ajusta el ancho mínimo según sea necesario */
+  }
+
+  :host ::ng-deep .fc-timegrid-event {
+    width: 80px;
+    height: 80px;
+    font-size: 12px; /* Ajusta el tamaño de fuente según tus necesidades */
+    display: block;
+    max-width: inherit !important;
+  }
+
+  /* En tu archivo CSS */
+  :host ::ng-deep .fc-timegrid-slots tr {
+    height: 90px; /* Ajusta la altura de filas según tus necesidades */
+    width: 200px;
+  }
+
+  /* Ajustar el ancho de las columnas de días en FullCalendar */
+  :host ::ng-deep .fc-daygrid-view .fc-daygrid-body .fc-day {
+    width: 200px; /* Ajusta el ancho según tus necesidades */
+  }
+}
+
+
+
+  
+  
+  
+
+ /* Ajustes específicos para tamaños de pantalla pequeños */
+ @media screen and (min-width: 360px) and (max-width: 480px) {
+  .calendar-container {
+    width: 100%;     
+    font-size: 11px;
+    padding:0px;
+    margin:0px; 
+    overflow-x: auto; /* Agrega scroll horizontal */
+     
+  }
+
+/* Ajusta el ancho de las columnas de los días */
+ :host ::ng-deep  .fc-scroller {
+  overflow-x: auto;
+}
+
+ :host ::ng-deep  .fc-scrollgrid {
+  min-width: 600px; /* Ajusta el ancho mínimo según sea necesario */
+}
+
+  
+
+  :host ::ng-deep .fc-timegrid-event {    
+    width: 50px;
+    height: 70px;  
+    font-size: 9px;   
+    display: block;
+    max-width: inherit !important;      
+  }
+
+  /* En tu archivo CSS */
+:host ::ng-deep .fc-timegrid-slots tr {
+  height: 100px; /* Ajusta la altura de  filas según tus necesidades */ 
+  width: 200px; 
+}
+
+/* Ajustar el ancho de las columnas de días en FullCalendar */
+:host ::ng-deep .fc-daygrid-view .fc-daygrid-body .fc-day {
+  width: 200px; /* Ajusta el ancho según tus necesidades */
+}
+  
+
+}  

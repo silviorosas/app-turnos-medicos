@@ -1,0 +1,28 @@
+<section class="home">
+
+  <div class="content1">
+      <img src="/assets/icono.png" alt="icono" class="logo mr-2">
+      <div class="texto">
+          <div class="d-flex align-items-center">
+              <h1 class="mb-0 mr-2">Med</h1>
+              <h2 class="mb-0">Conecta</h2>
+          </div>          
+          <p>Tu plataforma de salud digital</p>
+          <p *ngIf="!nombreUsuario" class="display-4">Bienvenido!</p>
+          <p *ngIf="nombreUsuario" class="display-4">Hola, {{nombreUsuario}}</p>
+      </div>
+  </div>
+  <div>
+    
+   
+  </div>
+
+  <div class="content2 text-center py-3">
+      <button routerLink="/login-consultas" class="orange-button">Realizar una Consulta</button>
+      <button routerLink="/register-consultas" class="blue-button">Ver Médicos Disponibles</button>
+      <button routerLink="/register-consultas" class="gray-button">Ver Consultas</button>
+      
+  </div>
+</section>
+
+<app-footer></app-footer>

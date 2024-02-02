@@ -1,0 +1,90 @@
+.navbar {
+  background: #020F59;
+  padding: 20px;
+}
+
+.home {
+  justify-content: center;
+  padding: 40px;
+  align-items: center;
+  display: flex;
+  height: 82vh;
+}
+
+.content {
+  max-width: 600px;
+  text-align: center;
+}
+
+.texto {
+  margin-bottom: 20px;
+}
+
+.texto img {
+  width: 100px;
+}
+
+.titulo {
+
+  color: #1325AA;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: -0.3px;
+}
+
+.titulo h1 {
+  font-size: 27px;
+  font-family: Urbanist;
+  font-weight: bold;
+}
+
+
+.form label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+  color: #1325AA;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: normal;
+  padding-left: 10px;
+}
+
+.form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #1325AA;
+  background: #F7F8F9;
+}
+
+
+.button{
+  padding: 20px;
+}
+
+.orange-button {
+  background-color: #F4511E;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 270px;
+  height: 45px;
+  font-family: Urbanist;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 50px;
+}
+
+.text-blue {
+  color: #2962FF;
+  margin-top: 0;
+  padding: 20px;
+  font-family: Urbanist;
+  font-size: 10px;
+  font-weight: 600;
+  text-decoration-line: underline;
+}

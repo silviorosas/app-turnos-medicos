@@ -1,0 +1,24 @@
+<app-nav></app-nav>
+<section class="home">
+  <div class="content">
+    <div class="texto">
+      <img src="/assets/persona.jpeg" alt="icono">
+      <div class="titulo">
+        <h1>Te damos la bienvenida a nuestra app</h1>
+      </div>
+      <div class="form">
+        <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+        <label for="nombreUsuario">Nombre de Usuario</label>
+        <input type="nombreUsuario" id="nombreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario" required>
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" [(ngModel)]="password" required>      
+      <button class="orange-button"[disabled]="!f.valid" type="submit">
+        <i class="fas fa-sign-in-alt"></i> Iniciar Sesión</button>
+        </form>
+      <p class="text-blue">¿Olvidaste tu contraseña?</p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

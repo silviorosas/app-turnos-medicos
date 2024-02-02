@@ -1,0 +1,56 @@
+
+  <app-nav></app-nav>
+  
+    <header>
+      <img src="assets/doc.jpg" alt="Foto de un médico">
+      <hr class="line-ciam">
+      <h4>Conecta con Médicos las 24 horas</h4>
+    </header>
+  
+    <div class="card-container">
+      <div class="card">
+        <a routerLink="/crear-consulta">
+        <img src="assets/turnos.png" alt="Foto video llamada" class="doctor-img">
+        </a>
+        <h5>Nuevo Turno</h5>
+      </div>
+      <div class="card">
+        <a (click)="abrirModal()">
+        <img src="assets/misTurnos.png" alt="Foto consultas" class="doctor-img">
+        </a>
+        <h5>Mis Consultas</h5>
+      </div>
+      <div class="card">
+        <a routerLink="/medicos">
+        <img src="assets/med.png" alt="Foto equipo médico" class="doctor-img">
+        </a>
+        <h5>Médicos</h5>
+      </div> 
+      <div class="card">
+        <a routerLink="/calendario">
+        <img src="assets/calendario.png" alt="Foto equipo médico" class="doctor-img">
+        </a>
+        <h5>Agenda de turnos</h5>
+      </div>      
+    </div> 
+  
+  
+  <app-footer></app-footer>
+
+  
+<!-- Modal -->
+<div class="modal" [style.display]="modalVisible ? 'block' : 'none'">
+    <div class="modal-content">
+      <span  class="close" (click)="cerrarModal()"> &times;</span>
+      <h3>Tus Consultas</h3>
+      <div>  
+        <input type="text" [(ngModel)]="dniPaciente" placeholder="Ingrese su DNI">
+        <button style="margin-top: 10px;" (click)="buscarDescripcionPorDni()">Buscar Consultas</button>  
+        <div *ngIf="descripcionConsulta.length >0">
+          <h4>Su historial de consultas:</h4>
+          <ul>
+            <li *ngFor="let desc of descripcionConsulta">{{ desc }}</li>
+          </ul>
+        </div>  
+      </div>
+  

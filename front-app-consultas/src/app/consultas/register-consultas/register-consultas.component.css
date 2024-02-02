@@ -1,0 +1,192 @@
+/* NAV*/
+
+.navbar {
+    background: #020F59;
+    padding: 20px;
+  }
+  
+  /* HOME */
+  
+  .home {
+    justify-content: center;
+    padding: 20px;
+    display: flex;
+    height: 94vh;
+  }
+  
+  /* IMG */
+  
+  .superior img {
+    width: 50px;
+  }
+  
+  /* LINEA */
+  
+  .loader {
+    width: 342px;
+    height: 5px;
+    border-radius: 100px;
+    border-top: 1px solid white;
+    margin: 10px;
+    background-color: #D9D9D9;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .gray-line,
+  .green-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+  
+  .gray-line {
+    width: 100%;
+    background-color: #D9D9D9;
+  }
+  
+  .green-line {
+    width: 50%;
+    background-color: #01DBC6;
+    animation: loadingAnimation 10s linear infinite;
+  }
+  
+  @keyframes loadingAnimation {
+    0% {
+      width: 0;
+    }
+  
+    100% {
+      width: 30%;
+    }
+  }
+  
+  
+  /* CONTENIDO */
+  
+  .content {
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  
+  h1 {
+    color: rgba(0, 0, 0, 0.80);
+    font-family: Nunito;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  
+  /* FORM */
+  
+  .form {
+    margin-bottom: 20px;
+  }
+  
+  .form label{
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #1325AA;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: normal;
+    padding-left: 45px;
+  }
+  
+  .form input {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #1325AA;
+    background: #F7F8F9;
+  }
+  
+  /* CHECK POSITION */
+  
+  .check{
+    display: flex;
+    align-items: center;
+  }
+  
+  .check input[type="checkbox"] {
+    width: auto;
+    margin-left: 45px;
+  }
+  
+  .check label {
+    padding-left: 12px;
+    margin: 10px 0px 10px;
+  }
+  
+  
+  /* CHECK DESCUBIERTO */
+  
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    /* Espacio entre el checkbox y las opciones */
+  }
+  
+  .opciones {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+  
+  .opciones label{
+    margin-right: 5px;
+  }
+  
+  #opcionesCheck:checked ~ .opciones {
+    display: block; /* Mostrar las opciones al hacer clic en el checkbox */
+  }
+  
+  
+  
+  /* SELECT NORMALES Y PEQUEÑOS*/
+  
+  select {
+    border-radius: 5px;
+    border: 1px solid #1325AA;
+    margin-bottom: 5px;
+    text-align: left;
+    color: rgba(30, 30, 30, 0.89);
+    font-family: Nunito Sans;
+    font-weight: 400;
+  }
+  
+  select.small-select {
+    margin-right: 7px;
+    padding: 10px;
+    width: 90px;
+  }
+  
+  /* GROUP*/
+  
+  .form-group{
+    display: inline-flex;
+  }
+  
+  /* BUTTON*/
+  
+  .orange-button {
+    background-color: #F4511E;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 270px;
+    height: 45px;
+    font-family: Urbanist;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: normal;
+    
+  }

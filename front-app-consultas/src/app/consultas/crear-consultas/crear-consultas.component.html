@@ -1,0 +1,72 @@
+ <nav class="navbar">
+      <div class="logo">
+        <img src="assets/logo.png" alt="Icono de suma">
+        <span class="medconecta">Med<span class="ciam">Conecta</span></span>
+      </div>
+    </nav>
+
+<section class="home">
+    <div class="content">
+        <div class="superior">
+            <img src="assets/consulta.png" alt="icono">
+            <div class="loader">
+                <div class="gray-line"></div>
+                <div class="green-line"></div>
+            </div>
+        </div>
+        <h1>Realizar Consulta</h1>
+        <div class="form">
+            <form [formGroup]="consultaForm" (ngSubmit)="crearConsultaDniNew()" novalidate>
+            <label for="descripcion">Ingrese breve descripción de su cunsulta</label>
+            <input type="text" id="descripcion" name="descripcion" formControlName="descripcion" required>
+            <div *ngIf="consultaForm.get('descripcion')?.invalid && (consultaForm.get('descripcion')?.dirty || consultaForm.get('descripcion')?.touched)">
+                <small class="text-danger" *ngIf="consultaForm.get('descripcion')?.errors">
+                  Campo obligatorio - 
+                </small>
+                <small class="text-danger" *ngIf="consultaForm.get('descripcion')?.errors">
+                  Debe tener al menos 6 caracteres
+                </small>
+            </div>
+            <label for="dniPaciente">Ingrese D.N.I.</label>
+            <input type="text" id="dniPaciente" value="dniPaciente" formControlName="dniPaciente" required>
+            <div *ngIf="consultaForm.get('dniPaciente')?.invalid && (consultaForm.get('dniPaciente')?.dirty || consultaForm.get('dniPaciente')?.touched)">
+                <small class="text-danger" *ngIf="consultaForm.get('dniPaciente')?.errors">
+                  Campo obligatorio - 
+                </small>
+                <small class="text-danger" *ngIf="consultaForm.get('dniPaciente')?.errors">
+                  Debe tener al menos 8 caracteres
+                </small>
+              
+            </div>
+            <label for="password">Seleccione un Médico</label>      
+            <select class="form-control" id="idMedico" formControlName="idMedico">
+                <option value="">Click para ver médicos disponibles</option>
+                <option *ngFor="let medico of medicos" [value]="medico.id">{{ medico.nombre }}-Especialidad: {{medico.especialidad}}</option>
+            </select>
+            <div *ngIf="consultaForm.get('idMedico')?.errors && (consultaForm.get('idMedico')?.dirty || consultaForm.get('idMedico')?.touched)">
+                <small class="text-danger">
+                  Debe seleccionar un médico.
+                </small>
+            </div>
+            <label for="fechaAgendarTurno">Ingrese fecha y hora de consulta</label>
+            <input type="datetime-local" id="fechaAgendarTurno" name="fechaAgendarTurno" formControlName="fechaAgendarTurno" required>
+            <div *ngIf="consultaForm.get('fechaAgendarTurno')?.invalid && (consultaForm.get('fechaAgendarTurno')?.dirty || consultaForm.get('fechaAgendarTurno')?.touched)">
+                <small class="text-danger" *ngIf="consultaForm.get('fechaAgendarTurno')?.errors ">Campo obligatorio - </small>
+                <small class="text-danger" *ngIf="consultaForm.get('fechaAgendarTurno')?.errors ">Formato de fecha incorrecto</small>
+            </div>           
+ <br>
+ <br>
+            <button class="orange-button" >
+            <i class="fas fa-sign-in-alt"></i> Enviar</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+<br>
+ <app-footer></app-footer>
+
+<!--SPINNER-->
+<div class="spinner-container" *ngIf="showSpinner">
+    <div class="spinner"></div>
+</div> 

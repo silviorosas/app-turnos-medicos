@@ -1,0 +1,140 @@
+.home {
+    height: 100vh;
+}
+
+.content1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    background: #020F59;
+}
+
+.texto h1 {
+    margin: 0;
+    color: #FFF;
+    font-family: Urbanist;
+    font-size: 41px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: -0.41px;
+}
+
+.texto h2 {
+    margin: 0;
+    color: #01DBC6;
+    font-family: Urbanist;
+    font-size: 41px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: -0.41px;
+}
+
+
+.texto p {
+
+    width: 250px;
+    height: 16px;
+    color: #E75132;
+    font-family: Urbanist;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: -0.18px;
+
+}
+
+.text-white {
+    color: white;
+}
+
+.text-info {
+    color: #17a2b8;
+}
+
+.text-orange {
+    color: orange;
+}
+
+.text-blue {
+    color: #007bff;
+}
+
+
+
+
+
+
+
+
+.logo {
+    max-width: 70px;
+}
+
+
+.content2 {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.content2 p {
+    margin-top: 70px;
+}
+
+
+.orange-button {
+    background-color: #F4511E;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 270px;
+    height: 55px;
+    font-family: Urbanist;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 15px;
+  }
+
+
+.orange-button:hover {
+    background-color: blue;
+}
+
+
+.blue-button:hover {
+    background-color: blue;
+    color: white;
+}
+
+
+
+.blue-button {
+    background-color: white;
+    color: blue;
+    border: 2px solid blue;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 270px;
+    height: 55px;
+    margin-bottom: 15px;
+}
+
+.gray-button {
+    background-color: rgb(106, 219, 227);
+    color: rgb(17, 17, 18);
+    border: 2px solid rgb(114, 114, 220);
+    padding: 10px 20px;
+    border-radius: 8px;
+    width: 270px;
+    height: 55px;
+}

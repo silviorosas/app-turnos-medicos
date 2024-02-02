@@ -1,0 +1,196 @@
+
+  /* Navbar */
+  .navbar {
+    background-color: #141e57;
+    color: #ffffff;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  
+  .logo img {
+    width: 30px;
+    vertical-align: middle;
+  }
+  
+  .medconecta {
+    font-weight: bold;
+  }
+  
+  /* HOME */
+  
+  .home {
+    justify-content: center;
+    padding: 20px;
+    display: flex;
+    height: 84vh;
+  }
+  
+  /* IMG */
+  
+  .superior img {
+    width: 80px;
+  }
+  
+  /* LINEA */
+  
+  .loader {
+    width: 342px;
+    height: 5px;
+    border-radius: 100px;
+    border-top: 1px solid white;
+    margin: 10px;
+    background-color: #D9D9D9;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .gray-line,
+  .green-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+  
+  .gray-line {
+    width: 100%;
+    background-color: #D9D9D9;
+  }
+  
+  .green-line {
+    width: 50%;
+    background-color: #01DBC6;
+    animation: loadingAnimation 10s linear infinite;
+  }
+  
+  @keyframes loadingAnimation {
+    0% {
+      width: 0;
+    }
+  
+    100% {
+      width: 30%;
+    }
+  }
+  
+  
+  /* CONTENIDO */
+  
+  .content {
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  
+  h1 {
+    color: rgba(0, 0, 0, 0.80);
+    font-family: Nunito;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  
+  /* FORM */
+  
+  .form {
+    margin-bottom:0px;
+  }
+  
+  .form label{
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #1325AA;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: normal;
+    padding-left: 45px;
+  }
+  
+  .form input {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #1325AA;
+    background: #F7F8F9;
+  }
+
+  .form select {
+    width: 80%;
+    height: 22%;
+    padding: 8px;
+    margin-bottom: 10px;
+    margin-left: 36px;
+    border-radius: 8px;
+    border: 1px solid #1325AA;
+    background: #F7F8F9;
+  }
+  
+  
+  
+  
+  
+  
+  /* GROUP*/
+  
+  .form-group{
+    display: inline-flex;
+  }
+  
+  /* BUTTON*/
+  
+  .orange-button {
+    background-color: #F4511E;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 270px;
+    height: 45px;
+    font-family: Urbanist;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: normal;
+
+    
+    
+  }
+
+
+  
+
+/* //spinner */
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
+  z-index: 9999; /* Asegura que esté por encima de otros elementos */
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #3498db; /* Color del spinner */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite; /* Animación de rotación */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

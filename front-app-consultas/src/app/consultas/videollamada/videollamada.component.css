@@ -1,0 +1,109 @@
+/* HOME*/
+
+.home {
+    justify-content: center;
+    display: flex;
+  }
+  
+  
+  /* FONDO */
+  
+  .content {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .fondo {
+    height: 700px;
+    background: #1325AA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  video{
+    width: 370px;
+  }
+  .cont div {
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  p {
+    color: #FFF;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: -0.2px;
+    padding: 40px;
+    width: 330px;
+  }
+  
+  
+  
+  /* TELEFONO */
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-container {
+    margin-top: -65px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #FC015B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: pulse .7s ease-out alternate infinite;
+  }
+  
+  
+  
+  
+  /* INFERIOR */
+  
+  .inferior {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #020F59;
+    height: 100px;
+    margin-top: -25px;
+  }
+  
+  .inferior img {
+    margin: 20px 5px;
+    width: 55px;
+  }
+  
+  .inferior div {
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 130%;
+    padding: 15px;
+    margin-top: 5px;
+  }
+  
+  
+  
+  @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+  
+  
+  @keyframes pulse {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: .2;
+    }
+  }
+  

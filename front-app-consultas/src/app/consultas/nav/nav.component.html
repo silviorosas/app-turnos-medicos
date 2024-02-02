@@ -1,0 +1,27 @@
+<nav class="navbar">
+    <div class="navbar1">
+        <div class="dropdown">
+            <img  src="/assets/USUARIO-01.png" alt="usuario" class="salir">
+            <div class="dropdown-content">
+                <ul>
+                    <li>Configuraciones</li>
+                    <a *ngIf="isLogged"  (click)="onLogOut()">
+                    <li>Salir</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar2">
+        <div class="cont-nav">
+            <img src="/assets/icono.png" alt="icono" class="logi">
+            <div class="texto-nav">
+                <div class="d-flex align-items-center">
+                    <h1 class="mb-0 mr-2">Med</h1>
+                    <h2 class="mb-0">Conecta</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
